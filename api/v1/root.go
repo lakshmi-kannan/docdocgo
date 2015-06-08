@@ -3,8 +3,10 @@ package v1
 import (
 	"fmt"
 	"net/http"
+	"os"
 
 	"github.com/mailgun/scroll"
+	"github.com/mailgun/vulcand/plugin"
 )
 
 func Run(registry *plugin.Registry) error {
