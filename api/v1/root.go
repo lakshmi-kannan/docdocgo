@@ -31,16 +31,16 @@ type Service struct {
 }
 
 func NewService(options Options, registry *plugin.Registry) *Service {
-    return &Service{
-        registry: registry,
-        options:  options,
-        errorC:   make(chan error),
-        // Channel receiving signals has to be non blocking, otherwise the service can miss a signal.
-        sigC: make(chan os.Signal, 1024),
-    }
+	return &Service{
+		registry: registry,
+		options:  options,
+		errorC:   make(chan error),
+		// Channel receiving signals has to be non blocking, otherwise the service can miss a signal.
+		sigC: make(chan os.Signal, 1024),
+	}
 }
 
 func (s *Service) Start() error {
-    fmt.Println('Service started.')
-    return nil
+	fmt.Println("Service started.")
+	return nil
 }
