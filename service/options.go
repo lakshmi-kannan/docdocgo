@@ -1,7 +1,7 @@
 package service
 
 import (
-    time
+	"time"
 )
 
 type Options struct {
@@ -21,7 +21,7 @@ type Options struct {
 	EtcdKeyFile     string
 	EtcdConsistency string
 
-	Log         string
+	Log string
 	// LogSeverity severity
 
 	ServerReadTimeout    time.Duration
